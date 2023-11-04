@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import LoginControl from "./LoginControl";
+import LoginButton from "./LoginButton";
 
 const Header = () => {
   return (
@@ -17,9 +17,7 @@ const Header = () => {
         <NavLink to="/tv">TV 프로그램</NavLink>
         <NavLink to="/celebrity">인물</NavLink>
       </NavLinks>
-      <LoginControlWrapper>
-        <LoginControl />
-      </LoginControlWrapper>
+      <LoginButton />
     </HeaderContainer>
   );
 };
@@ -47,8 +45,8 @@ const NavLink = styled(Link)`
   margin-left: 20px;
 `;
 
-const LoginControlWrapper = styled.div`
-  margin-left: 20px;
-`;
+// const LoginControlWrapper = styled.div`
+//   margin-left: 20px;
+// `;
 
 export default Header;

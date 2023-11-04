@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import TV from "./pages/TV";
 import Celebrity from "./pages/Celebrity";
 import MovieDetail from "./pages/MovieDetail";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/movies/:title" element={<MovieDetail />} />
           <Route path="/tv" element={<TV />} />
           <Route path="/celebrity" element={<Celebrity />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </div>
