@@ -1,19 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Ad = ({ displayAd }) => {
-  if (!displayAd) {
-    return null;
-  }
-
-  return (
-    <div>
-      <img
-        src="/img/movieAd.png"
-        alt="Advertisement"
-        style={{ width: '100%', maxWidth: '500px' }}
-      />
-    </div>
-  );
+const Ad = ({ show }) => {
+  return show ? (
+    <img src="img/movieAd.png" alt="Ad" style={{ width: "100%" }} />
+  ) : null;
 };
 
 export default Ad;

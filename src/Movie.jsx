@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const MovieContainer = styled.div`
   width: 250px;
@@ -32,9 +33,21 @@ const MovieVoteAvg = styled.span`
 const IMG_BASE_URL = "https://image.tmdb.org/t/p/w1280/";
 
 export default function Movie({ title, poster_path, vote_average }) {
+  const navigate = useNavigate();
+
+  const onClickImg = () => {
+    navigate(`/movies/${title}`, {
+      state: { title, poster_path, vote_average },
+    });
+  };
+
   return (
     <MovieContainer>
-      <MoviePoster src={IMG_BASE_URL + poster_path} alt="영화포스터" />
+      <MoviePoster
+        src={IMG_BASE_URL + poster_path}
+        alt="영화포스터"
+        onClick={onClickImg}
+      />
       <MovieInfo>
         <MovieTitle>{title}</MovieTitle>
         <MovieVoteAvg>{vote_average}</MovieVoteAvg>

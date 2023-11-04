@@ -1,23 +1,25 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Movies from "./pages/Movies";
 import Home from "./pages/Home";
 import TV from "./pages/TV";
 import Celebrity from "./pages/Celebrity";
+import MovieDetail from "./pages/MovieDetail";
 
 function App() {
   return (
     <div className="root-wrap">
-      <BrowserRouter>
+      <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:title" element={<MovieDetail />} />
           <Route path="/tv" element={<TV />} />
           <Route path="/celebrity" element={<Celebrity />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

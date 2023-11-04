@@ -26,7 +26,7 @@ const Header = () => {
 
 const HeaderContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
   background-color: #22254b;

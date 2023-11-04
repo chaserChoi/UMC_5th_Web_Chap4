@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import Ad from './Ad';
+import React, { Component } from "react";
+import Ad from "./Ad";
 
 class AdPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayAd: true,
+      showAd: true,
     };
   }
 
   handleToggleClick = () => {
-    this.setState((prevState) => ({
-      displayAd: !prevState.displayAd,
+    this.setState((state) => ({
+      showAd: !state.showAd,
     }));
   };
 
   render() {
     return (
       <div>
-        {this.state.displayAd && <Ad />}
+        <Ad show={this.state.showAd} />
         <button onClick={this.handleToggleClick}>
-          {this.state.displayAd ? 'Hide Ad' : 'Show Ad'}
+          {this.state.showAd ? "Hide Ad" : "Show Ad"}
         </button>
       </div>
     );
