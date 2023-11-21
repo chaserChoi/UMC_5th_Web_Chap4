@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Movies from "./pages/Movies";
 import Home from "./pages/Home";
-import TV from "./pages/TV";
 import Celebrity from "./pages/Celebrity";
 import MovieDetail from "./pages/MovieDetail";
 import Login from "./pages/Login";
+import TVs from "./pages/TVs";
+import TVDetail from "./pages/TVDetail";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:title" element={<MovieDetail />} />
-          <Route path="/tv" element={<TV />} />
+          <Route path="/tvs" element={<TVs />} />
+          <Route path="/tvs/:name" element={<TVDetail />} />
           <Route path="/celebrity" element={<Celebrity />} />
           <Route path="/login" element={<Login />} />
         </Routes>

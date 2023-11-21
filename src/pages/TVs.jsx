@@ -1,14 +1,14 @@
-import Movie from "../Movie";
-import { movies } from "../movieList";
+import TV from "../TV";
+import { tvs } from "../tvDummy";
 
-function Movies() {
+function TVs() {
   return (
     <div>
       <div className="app-container">
-        {movies.results.map((item) => {
+        {tvs.results.map((item) => {
           return (
-            <Movie
-              title={item.title}
+            <TV
+              title={item.name}
               poster_path={item.poster_path}
               vote_average={item.vote_average}
               overview={item.overview}
@@ -20,4 +20,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default TVs;

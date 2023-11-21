@@ -14,7 +14,7 @@ const Header = () => {
           />
         </NavLink>
         <NavLink to="/movies">영화</NavLink>
-        <NavLink to="/tv">TV 프로그램</NavLink>
+        <NavLink to="/tvs">TV 프로그램</NavLink>
         <NavLink to="/celebrity">인물</NavLink>
       </NavLinks>
       <LoginButton />
